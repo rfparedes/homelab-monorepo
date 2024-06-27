@@ -1,0 +1,5 @@
+---
+# main.yml tasks for rancher role
+
+- name: Run Rancher server
+  command: docker run -d --restart=unless-stopped -p 80:80 -p 443:443 --privileged rancher/rancher

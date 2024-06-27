@@ -1,0 +1,8 @@
+---
+# ansible-playbook -i inventories/production/inventory.yaml playbooks/common_roles.yaml
+- name: Run myrole against all servers
+  hosts: all_servers
+  become: yes  # If the role requires root privileges, otherwise omit this line
+  remote_user: root
+  roles:
+    - package_updates

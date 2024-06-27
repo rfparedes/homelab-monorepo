@@ -1,0 +1,18 @@
+all:
+  vars:
+    ansible_user: root
+  children:
+    proxmox:
+      hosts:
+        192.168.1.161:
+        192.168.1.162:
+    kubernetes:
+      hosts:
+        192.168.2.183:
+        192.168.1.76:
+        192.168.0.200:
+        192.168.0.114:
+    all_servers:
+      children:
+        proxmox:
+        kubernetes:

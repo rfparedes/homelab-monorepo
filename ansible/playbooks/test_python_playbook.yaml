@@ -1,0 +1,10 @@
+- name: Test Python Interpreter on Remote Host
+  hosts: all
+  tasks:
+    - name: Run a Python script to check the version
+      command: python3 --version
+      register: python_version
+
+    - name: Print the Python version
+      debug:
+        msg: "Python version on remote host is: {{ python_version.stdout }}"
