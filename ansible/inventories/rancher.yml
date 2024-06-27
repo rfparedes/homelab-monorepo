@@ -1,5 +1,0 @@
-rancher:
-  hosts:
-    192.168.2.59:
-  vars:
-    rancher_version: 'latest'
